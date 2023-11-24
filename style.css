@@ -337,37 +337,39 @@ span{
     font-family: Gill Sans, sans-serif;
 }
 i{
-	font-weight: bolder;
+	/* font-weight: bolder; */
     font-family:Jazz LET, fantasy;
 	cursor: pointer;
-	text-transform: uppercase;
-	animation: load 5.6s linear infinite 5.0S;
+	/* text-transform: uppercase; */
+	animation: load 6s linear infinite alternate forwards ;
+	/* animation-direction: reverse; */
 
 	
 }
 @keyframes load{
-	0%{
-		color: var(--primary);
-		box-shadow: inset 2px 2px 5px rgba(241,241,241,1);
+	0%,100%{
+		color:none;
+		filter: blur(100px);
+		text-shadow: 0 0 10px #00BFFF,
+					 0 0 20px #00BFFF,
+					 0 0 40px #00BFFF,
+					 0 0 80px #00BFFF,
+					 0 0 100px #00BFFF,
+					 0 0 200px #00BFFF,
+					 0 0 300px #00BFFF;
 	
 	}
-	75%{
-		color: var(--primary--third);
-		box-shadow: inset 2px 2px 8px rgba(241,241,241,1);	
-	}
-	95%{
-		color: var(--third--secondar);
-		box-shadow: inset 2px 2px 10px rgba(241,241,241,1);	
+	5%,95%{
+		color: #00bfffd2;
+		filter: blur(0px);
+		text-shadow:none;
 		
-	}
-	100%{
-		color: transparent;
-		opacity: 0;
 	
 	}
+	
 }
 i:nth-child(1){
-	animation-delay: 1.6s;
+	animation-delay:1.6s;
 }
 i:nth-child(2){
 	animation-delay: 1.8s;
@@ -440,6 +442,7 @@ i:nth-child(11){
  
 	
 }
+
 hr{
 	border: none;
 	width: 500px;
