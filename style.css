@@ -8,11 +8,8 @@ body{
     --third:gray;
 	width: 100%;
 	height: 100vh;
-    /* background:transparent; */
-    /* height: 100vh; */
-    /* background-size:cover; */
-    /* overflow: hidden */
     position: relative;
+	font-size: 16px;
 
     /* #########################################################################Navigateur */
 
@@ -76,10 +73,9 @@ body{
 
 .nav-principal:active{
 	height: 100vh;
+    
 }
-.nav-principal.active{
-	height: 100vh;
-}
+
 .cont{
     display: flex;
     background:transparent;
@@ -90,7 +86,7 @@ body{
 }
 .cont-icons{
     width: 70%;
-    max-width: 200px;
+    max-width: 10%;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -181,43 +177,9 @@ body{
 	background: var(--third);
 }
 
-
-
-
 }
 /* #########################################################################Bacckground */
-/* .animation{
-    left: -100px;
-    right: -100px;
-    perspective: 100px;
-	animation: wing 5s cubic-bezier(0.32, 0.07, 0.67, 1.19) infinite alternate;
 
-}
-.petal::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2000px;
-    background:url(./image/fond2.png);
-    animation: fall 20s linear infinite;
-    transform: translateZ(50px);
-
-}
-@keyframes fall{
-    0%{
-        transform: translateY(-1000px);
-        
-    }
-
-}
-@keyframes wing{
-    100%{
-        transform: translateX(50px) translateZ(50px);
-        
-    }
-} */
 .animation{
 	width: 100%;
 	height: 100vh;
@@ -225,6 +187,9 @@ body{
 	background-size: cover;
 	position: absolute;
 	overflow: hidden;
+	object-fit: cover;
+  	object-position: top center;
+
 	
 }
 .image img{
@@ -236,6 +201,8 @@ body{
 	/* background-image: url(https://tenor.com/fr/view/white-opal-jewel-shells-pikaole-sea-turtle-pretty-gif-21974922); */
 	z-index: 500;
 	width: 300px;
+	max-inline-size: 100%;
+
 	
 
 }
@@ -336,72 +303,7 @@ body{
 span{
     font-family: Gill Sans, sans-serif;
 }
-i{
-	/* font-weight: bolder; */
-    font-family:Jazz LET, fantasy;
-	cursor: pointer;
-	/* text-transform: uppercase; */
-	animation: load 6s linear infinite alternate forwards ;
-	/* animation-direction: reverse; */
-
-	
-}
-@keyframes load{
-	0%,100%{
-		color:none;
-		filter: blur(100px);
-		text-shadow: 0 0 10px #00BFFF,
-					 0 0 20px #00BFFF,
-					 0 0 40px #00BFFF,
-					 0 0 80px #00BFFF,
-					 0 0 100px #00BFFF,
-					 0 0 200px #00BFFF,
-					 0 0 300px #00BFFF;
-	
-	}
-	5%,95%{
-		color: #00bfffd2;
-		filter: blur(0px);
-		text-shadow:none;
-		
-	
-	}
-	
-}
-i:nth-child(1){
-	animation-delay:1.6s;
-}
-i:nth-child(2){
-	animation-delay: 1.8s;
-}
-i:nth-child(3){
-	animation-delay: 2.0s;
-}
-i:nth-child(4){
-	animation-delay: 2.6s;
-}
-i:nth-child(5){
-	animation-delay: 2.8s;
-}
-i:nth-child(6){
-	animation-delay: 3.0s;
-}
-i:nth-child(7){
-	animation-delay: 4.0s;
-}
-i:nth-child(8){
-	animation-delay: 4.6s;
-}
-i:nth-child(9){
-	animation-delay: 4.8s;
-}
-i:nth-child(10){
-	animation-delay: 5.0s;
-}
-i:nth-child(11){
-	animation-delay: 5.6s;
-}
-
+@media screem
 
 .wave {
 	animation-name: wave-animation;  
@@ -438,10 +340,7 @@ i:nth-child(11){
 		}
 }
 
-@media screen and (max-width=1000px) and (min-width=780px) {
- 
-	
-}
+
 
 hr{
 	border: none;
@@ -486,4 +385,106 @@ hr{
 	box-shadow: 0 0 10px 7px rgba(241,241,241,12);	
 
 
+}
+/* ****************************************************************************************** */
+
+
+/* ######################################################################### Taille d'écran moyenne (par exemple, entre 769px et 1024px) */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Ajoutez des ajustements spécifiques si nécessaire pour cette taille d'écran */
+    body {
+        font-size: 14px;
+    }
+
+    .nav-principal a {
+        font-size: 20px;
+    }
+
+    .burger {
+        height: 40px;
+        width: 40px;
+    }
+
+    .burger-ligne {
+        width: 30px;
+        height: 4px;
+        top: 50%;
+        left: 5%;
+    }
+
+    .prest span {
+        font-size: 40px;
+    }
+
+    i {
+        font-size: 14px;
+    }
+}
+
+/* ######################################################################### Taille d'écran très petite (par exemple, jusqu'à 320px) */
+
+@media screen and (max-width: 320px) {
+    /* Ajoutez des ajustements spécifiques si nécessaire pour cette taille d'écran */
+    body {
+        font-size: 12px;
+    }
+
+    .nav-principal a {
+        font-size: 18px;
+    }
+
+    .burger {
+        height: 30px;
+        width: 30px;
+    }
+
+    .burger-ligne {
+        width: 20px;
+        height: 3px;
+        top: 50%;
+        left: 3%;
+    }
+
+    .prest span {
+        font-size: 0px;
+
+    }
+
+    i {
+        font-size: 12px;
+    }
+}
+
+/* ######################################################################### Taille d'écran extrêmement petite (par exemple, jusqu'à 240px) */
+
+@media screen and (max-width: 240px) {
+    /* Ajoutez des ajustements spécifiques si nécessaire pour cette taille d'écran */
+    body {
+        font-size: 10px;
+    }
+
+    .nav-principal a {
+        font-size: 16px;
+    }
+
+    .burger {
+        height: 20px;
+        width: 20px;
+    }
+
+    .burger-ligne {
+        width: 15px;
+        height: 2px;
+        top: 50%;
+        left: 2%;
+    }
+
+    .prest span {
+        font-size: 20px;
+    }
+
+    i {
+        font-size: 10px;
+    }
 }
