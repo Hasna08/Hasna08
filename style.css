@@ -31,6 +31,10 @@ body{
 .nav-principal ul li{
 	margin: 1rem 0 ;
 }
+.nav-principal{
+	
+	transition: opacity 0.4s ease;
+}
 .nav-principal a{
 	font-size: 25px;
 	position: relative;
@@ -38,7 +42,7 @@ body{
 	padding: 1rem;
 	text-decoration: none;
 	color: var(--secondar);
-	opacity: 0;
+	/* opacity: 0; */
 }
 .nav-principal a::before{
 	content: " ";
@@ -289,6 +293,8 @@ body{
 	padding: center;
 	font-size: 100%;
     text-align: center;
+	/* opacity: 1; */
+	transition: opacity 0.4s ease;
     
 }
 .prest span{
@@ -303,7 +309,7 @@ body{
 span{
     font-family: Gill Sans, sans-serif;
 }
-@media screem
+
 
 .wave {
 	animation-name: wave-animation;  
