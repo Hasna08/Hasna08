@@ -1,0 +1,359 @@
+.global-cont{
+    max-width: 1920 px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+img{
+    object-fit: cover;
+}
+.filter-image{
+    opacity: 0.3;
+}
+.img-para{
+    width: auto;
+    height: 100px;
+    background: no-repeat center/cover url(./image/geologe.png);
+    background-attachment: fixed;
+}
+/* maquette */
+.section_our_solution .row {
+    align-items: center;
+  }
+  
+
+  .our_solution_category .solution_cards_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .solution_cards_box .solution_card1 {
+    flex: 0 50%;
+    background-image: url(./image/maquette/);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+      0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding-top: 250px;
+    padding-left: 10px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 300px;
+    transition: 0.7s;
+  }
+
+  
+  .solution_cards_box .solution_card1:hover {
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 15;
+  }
+  
+  .solution_cards_box .solution_card1:hover::before {
+    background: rgb(85 108 214 / 10%);
+  }
+  
+ 
+  
+  .solution_cards_box .solution_card1:before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 5%);
+    width: 170px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(42deg);
+    right: -56px;
+    top: -23px;
+    border-radius: 35px;
+  }
+
+  
+  
+  .solution_cards_box .solution_card1:hover .solu_description1 button {
+    background: #fff !important;
+    color: #309df0;
+  }
+  
+  
+  .solution_card1 .solu_description1 button {
+    border: 0;
+    border-radius: 15px;
+    background: linear-gradient(
+      140deg,
+      #42c3ca 0%,
+      #42c3ca 50%,
+      #42c3cac7 75%
+    ) !important;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1px 16px;
+    
+    
+  }
+  /* image 2 */
+  .solution_cards_box .solution_card2 {
+    flex: 0 50%;
+    background-image: url(./image/maquette/maquette.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+      0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding-top: 250px;
+    padding-left: 10px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 300px;
+    transition: 0.7s;
+  }
+
+  
+  .solution_cards_box .solution_card2:hover {
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 15;
+  }
+  
+  .solution_cards_box .solution_card2:hover::before {
+    background: rgb(85 108 214 / 10%);
+  }
+  
+ 
+  
+  .solution_cards_box .solution_card2:before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 5%);
+    width: 170px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(42deg);
+    right: -56px;
+    top: -23px;
+    border-radius: 35px;
+  }
+
+  
+  
+  .solution_cards_box .solution_card2:hover .solu_description2 button {
+    background: #fff !important;
+    color: #309df0;
+  }
+  
+  
+  .solution_card2 .solu_description2 button {
+    border: 0;
+    border-radius: 15px;
+    background: linear-gradient(
+      140deg,
+      #42c3ca 0%,
+      #42c3ca 50%,
+      #42c3cac7 75%
+    ) !important;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1px 16px;
+    
+    
+  }
+  
+  
+ 
+  
+  /*start media query*/
+  @media screen and (min-width: 320px) {
+    .sol_card_top_3 {
+      position: relative;
+      top: 0;
+    }
+  
+    .our_solution_category {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .our_solution_category .solution_cards_box {
+      flex: auto;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .our_solution_category .solution_cards_box {
+      flex: 1;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .sol_card_top_3 {
+      position: relative;
+      top: -3rem;
+    }
+    .our_solution_category {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+  
+/* ***********plan batiment******** */
+.image{
+  width: 20%;
+  margin: 0 auto;
+ 
+}
+/* memoire */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Petemoss&display=swap");
+
+* {
+	box-sizing: border-box;
+	font-family: "Cinzel", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	background-color:none;
+}
+
+.book {
+	--book-height: 90vh;
+	--book-ratio: 1.5;
+}
+
+.book > div {
+	height: var(--book-height);
+	width: calc(var(--book-height) / var(--book-ratio));
+	overflow: auto;
+	background-color: #0a0a0a;
+	transform: scale(0.9);
+	border-radius: 6px;
+	transform-origin: left;
+}
+
+.book-cover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 9;
+	text-align: center;
+	background: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+		linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+		linear-gradient(315deg, black 25%, transparent 25%),
+		linear-gradient(45deg, black 25%, transparent 25%);
+	background-size: 2em 2em;
+	background-color: #232323;
+	color: white;
+	transition: transform 2s;
+}
+
+.book-cover::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	right: 20px;
+	top: 0;
+	bottom: 0;
+	background-color: none;
+}
+
+h1 {
+	font-family: "Petemoss", cursive;
+	font-size: 90px;
+	font-weight: 300;
+	color: #dbd75d;
+}
+
+h2 {
+	font-size: 10px;
+}
+.vontovorona{
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+.separator {
+	--separator-size: 8px;
+	width: var(--separator-size);
+	height: var(--separator-size);
+	background-color: #dbd75d;
+	margin: 50px auto 60px auto;
+	border-radius: 50%;
+	position: relative;
+}
+
+.separator::after,
+.separator::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	background-color: white;
+	height: 2px;
+	top: calc(50% - 1px);
+}
+
+.separator::after {
+	left: 15px;
+}
+
+.separator::before {
+	right: 15px;
+}
+
+.book-content {
+	transform: scale(0.9) translateY(30px);
+	background-color: white !important;
+	transition: all 0.3s 1s;
+}
+
+.book-content h3,
+.book-content p {
+	opacity: 0;
+	transition: all 0.3s 0.3s;
+}
+
+h3 {
+	padding: 20px;
+}
+
+p {
+	padding: 0px 30px 10px 30px;
+	text-align: justify;
+	font-size: 14px;
+}
+
+.book-cover > div {
+	transition: opacity 0s 0.6s;
+}
+
+.book:hover > .book-cover {
+	transform: rotateY(180deg) scale(0.9);
+}
+
+.book:hover > .book-cover > div {
+	opacity: 0;
+}
+
+.book:hover > .book-content {
+	transform: scale(0.9) translateY(0px);
+}
+
+.book:hover > .book-content h3,
+.book:hover > .book-content p {
+	opacity: 1;
+}
+
+/* autre */
