@@ -37,9 +37,7 @@ body{
 	background: var(--primary);
 	position: absolute;
 	cursor: pointer;
-	transition:top 0.5s ease-in-out,
-				transform 0.5s ease-in-out,
-				opacity 0.5s ease-in-out;
+				
 }
 
 .burger-ligne:nth-child(1){
@@ -53,7 +51,26 @@ body{
 	top: 35px;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .burger {
+    margin: 1% 5% 0; 
+  }
 
+  .burger-ligne {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .burger {
+    margin: 1% 2% 0; 
+  }
+
+  .burger-ligne {
+    width: 20px;
+  }
+}
 
 
 
@@ -244,6 +261,14 @@ color: #111;
   justify-content: center;
   min-height: 1vh;
   background: #27272c;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .block {
+    flex-direction: column; /* Change to column layout on smaller screens */
+    align-items: flex-start; /* Adjust alignment for column layout */
+  }
 }
 
 button {
