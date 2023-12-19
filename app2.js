@@ -8,3 +8,5 @@ function slider(anything){
 function resetImage() {
   document.querySelector('.competance').src = './image/competance/illustration.jpg';
 }
+
+

@@ -18,24 +18,26 @@ body{
 	position: absolute;
 	width: 100%;
 	height: auto;
-	top: 100px;
+	top: 200px;
 	left: 50%;
-	right: 50%;
-	transform: translate(-50%,-50%);
+	transform: translateX(-50%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background:transparent;
+	transition: all 0.2s ease;
 }
 .nav-principal ul li{
 	margin: 1rem 0 ;
+	text-align: center;
+	
 }
 .nav-principal{
-	/* display: none; */
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.5s ease, visibility 1s linear;
+	
 }
 .nav-principal.hidden{
 	opacity: 1;
@@ -80,11 +82,11 @@ body{
 .nav-principal a:hover::before,
 .nav-principal a:hover::after{
 	width: 100%;
+	
 }
 
-.nav-principal:active{
+.nav-principal.active{
 	height: 100vh;
-    
 }
 
 .cont{
@@ -109,7 +111,7 @@ body{
 }
 .icon{
     color: #f1f1f1;
-    width: 25px;
+    width: 20px;
     height: 20px;
     border-radius: 50%;
     text-align: center;
@@ -118,7 +120,7 @@ body{
     
 }
 .icon:hover{
-	width: 35px;
+	width: 22px;
 	box-shadow: #f1f1f1;
 }
 
@@ -155,7 +157,7 @@ body{
 	background:transparent;
 	margin: -3% 95% 0%;
 	position: relative;
-	cursor: pointer;
+	
 	
 }
 .burger-ligne{
@@ -166,6 +168,7 @@ body{
 	border-radius: 5px;
 	background: var(--primary);
 	position: absolute;
+	cursor: pointer;
 	transition:top 0.5s ease-in-out,
 				transform 0.5s ease-in-out,
 				opacity 0.5s ease-in-out;
@@ -174,18 +177,12 @@ body{
 .burger-ligne:nth-child(1){
 	top: 15px;
 }
+
 .burger-ligne:nth-child(2){
-	top: 30px;
+	top: 25px;
 }
-.burger:active .burger-ligne:nth-child(1){
-	top: 15px;
-	transform: rotate(130deg);
-	background: var(--third);
-}
-.burger:active .burger-ligne:nth-child(2){
-	top: 15px;	
-	transform: rotate(-130deg);
-	background: var(--third);
+.burger-ligne:nth-child(2){
+	top: 35px;
 }
 
 }
@@ -307,7 +304,6 @@ body{
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.8s ease, visibility 1s linear;
-	/* display: none; */
 }
 .prest span{
 	
@@ -378,14 +374,20 @@ hr{
 	box-shadow: 0 0 rgba(241,241,241,1);
 	transition: box-shadow 0.2s ease-in-out;
 	margin-left: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
 }
 .menu:hover{
 	background: var(--primary);
 	box-shadow: 0 0 10px 7px rgba(241,241,241,12);	
-
-
 }
+.menu.hidden{
+	transform: scale(0);
+	opacity: 0;
+	pointer-events: none;
+}
+
 .contact{
 	border: 2px solid var(--primary);
 	padding: 1rem 2rem;
