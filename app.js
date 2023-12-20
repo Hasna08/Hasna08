@@ -2,20 +2,31 @@
 const menu = document.querySelector(".nav-principal");
 const btn = document.querySelector(".burger");
 const acceuil = document.querySelector('.prest');
-const menuLink = document.querySelector(".menu")
+const menuLink = document.querySelector(".menu");
 
-// acceuil.style.opacity = 1;
-// menu.style.opacity = 0;
-btn.addEventListener('click', function(){
-    acceuil.classList.toggle('hidden'); 
+// Fonction pour réinitialiser les styles
+function resetStyles() {
+    acceuil.classList.remove('hidden');
+    menu.classList.remove('hidden');
+    menuLink.classList.remove('hidden');
+}
+
+btn.addEventListener('click', function () {
+    acceuil.classList.toggle('hidden');
 });
 
 btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden'); 
-})
+    menu.classList.toggle('hidden');
+});
 
-menuLink.addEventListener('click', function() {
-    menuLink.classList.toggle('hidden'); // Toggle la classe 'hidden' pour cacher ou afficher le bouton "En savoir plus"
-  });
+menuLink.addEventListener('click', function () {
+    menuLink.classList.toggle('hidden');
+});
 
+// Ajoutez un écouteur d'événements pour l'élément avec l'ID "precedant"
+document.getElementById('precedant').addEventListener('click', resetStyles);
 
+// Appel de la fonction resetStyles lorsque la page est chargée
+document.addEventListener('DOMContentLoaded', resetStyles);
+
+  
