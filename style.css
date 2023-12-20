@@ -13,6 +13,13 @@ body{
 
     /* #########################################################################Navigateur */
 
+.nav-principal{
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 1s linear;
+	text-align: center;
+	
+}
 .nav-principal ul {
 	list-style-type: none;
 	position: absolute;
@@ -33,12 +40,6 @@ body{
 	text-align: center;
 	
 }
-.nav-principal{
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.3s ease, visibility 1s linear;
-	
-}
 .nav-principal.hidden{
 	opacity: 1;
 	visibility: visible;
@@ -52,6 +53,7 @@ body{
 	color: var(--secondar);
 	/* opacity: 0; */
 }
+
 .nav-principal a::before{
 	content: " ";
 	display: block;
@@ -87,7 +89,23 @@ body{
 .nav-principal.active{
 	height: 100vh;
 }
+.liens-navigation {
+    text-decoration: none;
+    color: #444; /* Couleur du texte */
+    font-size: 18px; /* Taille du texte */
+    font-weight: 600; /* Épaisseur du texte */
+    padding: 12px 24px; /* Remplissage du lien */
+    border-radius: 6px; /* Bord arrondi */
+    transition: all 0.3s ease; /* Animation de transition */
+    border: 2px solid transparent; /* Bordure transparente */
+}
 
+.liens-navigation:hover {
+    background-color: #e0e0e0; /* Couleur de fond au survol */
+    color: #222; /* Couleur du texte au survol */
+    border-color: #aaa; /* Couleur de la bordure au survol */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Légère ombre au survol */
+}
 .cont{
     display: flex;
     background:transparent;
