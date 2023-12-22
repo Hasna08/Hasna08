@@ -1,4 +1,4 @@
- 
+        
 const menu = document.querySelector(".nav-principal");
 const btn = document.querySelector(".burger");
 const acceuil = document.querySelector('.prest');

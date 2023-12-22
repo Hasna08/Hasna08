@@ -9,7 +9,7 @@ body{
 	width: 100%;
 	height: 100vh;
     position: relative;
-	font-size: 16px;
+	font-size: 1rem;
 
     /* #########################################################################Navigateur */
 
@@ -107,11 +107,11 @@ body{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Légère ombre au survol */
 }
 .cont{
-    display: flex;
     background:transparent;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+	
        
 }
 .cont-icons{
@@ -123,13 +123,15 @@ body{
     list-style: none;
     padding: 1%;
     z-index: 500;
+	gap: 20px;
+	
     
 
 }
 .icon{
     color: #f1f1f1;
-    width: 20px;
-    height: 20px;
+    width: 1.25em;
+    height: 1.25em;
     border-radius: 50%;
     text-align: center;
     position: relative;
@@ -137,7 +139,7 @@ body{
     
 }
 .icon:hover{
-	width: 22px;
+	width: 1.3em;
 	box-shadow: #f1f1f1;
 }
 
@@ -169,19 +171,19 @@ body{
 }
 
 .burger{
-	height: 50px;
-	width: 50px;
+	height: 3.5vw;
+	width: 3vw;
 	background:transparent;
-	margin: -3% 95% 0%;
+	margin:-2% 95% 0;
 	position: relative;
 	
 	
 }
 .burger-ligne{
-	width: 40PX;
-	height: 5px;
-	top: 50%;
-	left: 10%;
+	width: 3vw;
+	height: 0.4vw;
+	top: 0;
+	left: 0;
 	border-radius: 5px;
 	background: var(--primary);
 	position: absolute;
@@ -191,25 +193,48 @@ body{
 				opacity 0.5s ease-in-out;
 }
 
-.burger-ligne:nth-child(1){
-	top: 15px;
+
+/* Utilisation de flex pour centrer verticalement la ligne */
+.burger-ligne::before,
+.burger-ligne::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.4vw; /* Utilisation de vw pour rendre la taille responsive */
+  border-radius: 5px;
+  background: var(--primary);
+  position: absolute;
+  transition: top 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.burger-ligne::before {
+  top: -0.8vw; /* Utilisation de vw pour rendre la taille responsive */
+}
+
+.burger-ligne::after {
+  bottom: -0.8vw; /* Utilisation de vw pour rendre la taille responsive */
+}
+
+/* .burger-ligne:nth-child(1){
+	top: 1.5vw;
 }
 
 .burger-ligne:nth-child(2){
-	top: 25px;
+	top: 2.5vw;
 }
 .burger-ligne:nth-child(2){
-	top: 35px;
-}
+	top: 3.5vw;
+} */
 
 }
 /* #########################################################################Bacckground */
 
-.animation{
+#acceuil{
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-image: url(./image/fond3.png);
 	background-size: cover;
+	background-attachment: fixed;
 	position: absolute;
 	overflow: hidden;
 	object-fit: cover;
@@ -224,7 +249,7 @@ body{
 	animation: wing 15s cubic-bezier(0.32, 0.07, 0.67, 1.19) infinite;
 
 	/* background-image: url(https://tenor.com/fr/view/white-opal-jewel-shells-pikaole-sea-turtle-pretty-gif-21974922); */
-	z-index: 500;
+	z-index: 1;
 	width: 300px;
 	max-inline-size: 100%;
 
@@ -323,11 +348,7 @@ body{
 	transition: opacity 0.3s ease, visibility 1s linear;
 }
 .prest span{
-	
-	top: 50%;
-	right:50%;
-	transform: translate(-50%,-50%);
-	font-size: 50px;
+	font-size:clamp(0.5rem, 3.5vw, 50px);
 	color:var(--secondar);
 
 }
@@ -375,7 +396,6 @@ span{
 
 hr{
 	border: none;
-	width: 500px;
 	height: 4px;
     margin: 1rem 20rem 2rem;
 	background: var(--primary);
@@ -387,13 +407,14 @@ hr{
 	border-radius: 5px;
 	color: var(--secondar);
 	text-decoration: none;
-	padding: 1%;
+	padding:1%;
 	box-shadow: 0 0 rgba(241,241,241,1);
 	transition: box-shadow 0.2s ease-in-out;
 	margin-left: 1rem;
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
+	font-size: clamp(0.5%,3vw, 100%);
+	z-index: 500;
 }
 .menu:hover{
 	background: var(--primary);
@@ -414,7 +435,9 @@ hr{
 	padding: 1% 3.5%;
 	box-shadow: 0 0 rgba(241,241,241,1);
 	transition: box-shadow 0.2s ease-in-out;
-    margin-left: 1rem;
+    margin-left: 2rem;
+	font-size: clamp(0.5%,3vw, 100%);
+	z-index: 500;
 }
 .contact:hover{
 	background: var(--primary);
@@ -427,101 +450,3 @@ hr{
 
 
 /* ######################################################################### Taille d'écran moyenne (par exemple, entre 769px et 1024px) */
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Ajoutez des ajustements spécifiques si nécessaire pour cette taille d'écran */
-    body {
-        font-size: 14px;
-    }
-
-    .nav-principal a {
-        font-size: 20px;
-    }
-
-    .burger {
-        height: 40px;
-        width: 40px;
-    }
-
-    .burger-ligne {
-        width: 30px;
-        height: 4px;
-        top: 50%;
-        left: 5%;
-    }
-
-    .prest span {
-        font-size: 40px;
-    }
-
-    i {
-        font-size: 14px;
-    }
-}
-
-/* ######################################################################### Taille d'écran très petite (par exemple, jusqu'à 320px) */
-
-@media screen and (max-width: 320px) {
-    /* Ajoutez des ajustements spécifiques si nécessaire pour cette taille d'écran */
-    body {
-        font-size: 12px;
-    }
-
-    .nav-principal a {
-        font-size: 18px;
-    }
-
-    .burger {
-        height: 30px;
-        width: 30px;
-    }
-
-    .burger-ligne {
-        width: 20px;
-        height: 3px;
-        top: 50%;
-        left: 3%;
-    }
-
-    .prest span {
-        font-size: 0px;
-
-    }
-
-    i {
-        font-size: 12px;
-    }
-}
-
-/* ######################################################################### Taille d'écran extrêmement petite (par exemple, jusqu'à 240px) */
-
-@media screen and (max-width: 240px) {
-    /* Ajoutez des ajustements spécifiques si nécessaire pour cette taille d'écran */
-    body {
-        font-size: 10px;
-    }
-
-    .nav-principal a {
-        font-size: 16px;
-    }
-
-    .burger {
-        height: 20px;
-        width: 20px;
-    }
-
-    .burger-ligne {
-        width: 15px;
-        height: 2px;
-        top: 50%;
-        left: 2%;
-    }
-
-    .prest span {
-        font-size: 20px;
-    }
-
-    i {
-        font-size: 10px;
-    }
-}

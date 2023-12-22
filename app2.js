@@ -2,7 +2,7 @@ function slider(anything){
   document.querySelector('.competance').src = anything; 
   setTimeout(function () {
     resetImage();
-  }, 10000);
+  }, 500000);
 
 }
 function resetImage() {
