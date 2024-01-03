@@ -412,7 +412,7 @@ hr{
 	transition: box-shadow 0.2s ease-in-out;
 	margin-left: 1rem;
 	cursor: pointer;
-	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
 	font-size: clamp(0.5%,3vw, 100%);
 	z-index: 500;
 }
